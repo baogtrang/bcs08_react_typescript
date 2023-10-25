@@ -8,3 +8,7 @@ export interface I_Todo {
 export interface I_PropListTodo {
     todos: I_Todo[];
 }
+
+export interface I_PropTodo {
+    todo: I_Todo;
+}

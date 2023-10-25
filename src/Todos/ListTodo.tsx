@@ -1,9 +1,26 @@
 import React from 'react'
 import { I_PropListTodo } from './interface'
+import ItemTodo from './ItemTodo'
 
 export default function ListTodo(
-  props: I_PropListTodo) {
+  {todos}: I_PropListTodo) {
   return (
-    <div>ListTodo</div>
+    console.log("todos:", todos),
+    <div>      
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          {todos.map((todo, index) => {
+            return <ItemTodo key={index} todo={todo} />
+          })}
+        </tbody>
+      </table>
+    </div>
   )
 }

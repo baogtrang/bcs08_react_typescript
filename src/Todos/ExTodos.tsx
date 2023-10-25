@@ -9,7 +9,7 @@ export default function ExTodos() {
   // liên quan đến object thì tạo interface
 
   // <I_Todo[]> describes an array of todo object of type I_Todo
-  let [todos, setTodos] = useState <I_Todo[]> ([
+  let [todo, setTodos] = useState <I_Todo[]> ([
     {
       id: 1,
       title: 'Todo 1',
@@ -25,7 +25,7 @@ export default function ExTodos() {
   return (
     <div className='container'>
         <FormTodo />
-        <ListTodo todos= {todos} />
+        <ListTodo todos= {todo} />
     </div>
   )
 }
