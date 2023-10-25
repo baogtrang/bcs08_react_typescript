@@ -5,11 +5,11 @@ import { I_Todo } from './interface';
 
 export default function ExTodos() {
   // todo is object
-  // todos is an array of todo
+  // todos is an array of todo objects
   // liên quan đến object thì tạo interface
 
   // <I_Todo[]> describes an array of todo object of type I_Todo
-  let [todo, setTodos] = useState <I_Todo[]> ([
+  let [todos, setTodos] = useState <I_Todo[]> ([
     {
       id: 1,
       title: 'Todo 1',
@@ -25,7 +25,7 @@ export default function ExTodos() {
   return (
     <div className='container'>
         <FormTodo />
-        <ListTodo todos= {todo} />
+        <ListTodo todos= {todos} />
     </div>
   )
 }

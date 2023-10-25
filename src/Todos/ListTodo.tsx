@@ -6,7 +6,7 @@ export default function ListTodo(
   {todos}: I_PropListTodo) {
   return (
     console.log("todos:", todos),
-    <div>      
+    <div className='table'>      
       <table>
         <thead>
           <tr>

@@ -1,4 +1,5 @@
-// Objective: Define the interface of the Todo object
+// Objective: Define the interface of 
+// the Todo object
 export interface I_Todo {
     id: number;
     title: string;

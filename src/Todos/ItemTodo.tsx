@@ -6,7 +6,11 @@ export default function ItemTodo({todo}:I_PropTodo) {
     <tr>
       <td>{todo.id}</td>
       <td>{todo.title}</td>
-      <td>{todo.isCompleted}</td>
+      <td>
+        <input
+          type="checkbox"
+          checked={!todo.isCompleted}/>
+      </td>
     </tr>
   )
 }

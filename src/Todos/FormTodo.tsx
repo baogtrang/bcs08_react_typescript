@@ -4,7 +4,6 @@ export default function FormTodo() {
   let [title, setTitle] = useState <string>("Alice"); 
 
   let handleChangeTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // console.log(e.target.value);
     setTitle(e.target.value);
   };
 
