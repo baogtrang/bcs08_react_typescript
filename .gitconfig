@@ -1,2 +1,4 @@
 [alias]
-    upd = "!git add -A && git commit -m 'updated' && git push"
+
+	deploy = "!git pull && git add --all && git commit -m 'deploy' && git push"
+	go = "!git pull && git add --all && git commit -m 'update' && git push"
