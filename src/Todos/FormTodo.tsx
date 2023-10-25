@@ -20,7 +20,9 @@ export default function FormTodo() {
         placeholder='Add title todo'
         value = {title}
       />
-      <button onClick={handleAdd} className='btn btn-danger'>Add</button>
+      <button onClick={handleAdd} className='btn btn-danger'>
+        Add
+      </button>
     </div>
   );
 }

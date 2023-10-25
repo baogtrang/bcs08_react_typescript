@@ -1,7 +1,7 @@
 import React from 'react'
 import { I_PropTodo } from './interface'
 
-export default function ItemTodo({todo}:I_PropTodo) {
+export default function ItemTodo({todo,handleDelete }:I_PropTodo) {
   return (
     <tr>
       <td>{todo.id}</td>
@@ -9,7 +9,12 @@ export default function ItemTodo({todo}:I_PropTodo) {
       <td>
         <input
           type="checkbox"
-          checked={!todo.isCompleted}/>
+          checked={todo.isCompleted}/>
+      </td>
+      <td>
+        <button onClick={()=>handleDelete(todo.id)} className='btn btn-warning'>
+          Delete
+        </button>
       </td>
     </tr>
   )

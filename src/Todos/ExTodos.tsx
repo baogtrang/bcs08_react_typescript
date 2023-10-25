@@ -22,10 +22,24 @@ export default function ExTodos() {
     },
   ]);
 
+  let handleDelete = (id: number)=> {
+    //filters out the specified id
+    setTodos(todos.filter(
+      todo => todo.id !== id))
+  }
+
+  let handleCreate=(newTodo:I_Todo) => {
+    console.log("newTodo:", newTodo)
+    
+  }
+
   return (
     <div className='container'>
         <FormTodo />
-        <ListTodo todos= {todos} />
+        <ListTodo 
+          handleDelete={handleDelete}
+          todos= {todos} 
+        />
     </div>
   )
 }
